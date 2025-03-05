@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carnicería JMR</title>
+    <title>index</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: white;
+            font-family: sans-serif;
 
         }
         nav {
@@ -26,7 +27,10 @@
             background-image: url("ejercicio-responsive/superior.jpg");
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 250px;
+            width: 100%;
+            margin-bottom: 150px;
+
         }
         nav a {
             color: white;
@@ -65,84 +69,104 @@
             display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Ajuste fino para que los iconos estén más juntos */
-    padding: 20px; /* Reducimos el padding */
+    gap: 50px; 
+    padding: 20px; 
         }
         .social-icons img {
-    width: 80px; /* Ajustar el tamaño de los iconos */
+    width: 80px; 
     height: 80px;
     margin: 0;
     margin-top: 60px;
 }
-        .contact-form {
-    background-color: grey;
-    max-width: 62%; 
-    margin:  0 auto; /* Se sube el formulario */
-    position: relative;
-    padding: 25px;
-    z-index: 20; /* Asegura que esté encima de la imagen del footer */
-    margin-top: 120px;
-    height: 55vh;
-}
-.contact-form label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.4rem;
-}
-#mensaje{
-    margin-left: 20px;
-}
 
-.contact-form .form-group {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px; /* Espacio entre email y teléfono */
-    width: 93%;
-    height: 22vh;
-   
-}
+.contacto {
+            background: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
 
-.contact-form .form-group div {
-    flex: 1; /* Ambos elementos ocupan el mismo ancho */
-    margin-top: 60px;
-    margin-left: 20px;
-}
+        .contacto form {
+            max-width: none;
+            margin: 20px auto;
+        }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: white;
-    font-size: 14px;
-    height: 3vh;
-}
+        .contacto label {
+            display: block;
+            color: #000;
+            margin-bottom: 5px;
+            text-align: left;
+            margin-left: 8px;
+        }
 
-.contact-form textarea {
-    height: 20vh; 
-    resize: none;
-    margin-left: 0px;
-    width: 91% ;
-    font-family: sans-serif;
-}
+        .contacto input, .contacto textarea {
+            width: calc(100% - 24px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .contacto textarea {
+            height: 150px;
+            resize: none; /* Deshabilitar la capacidad de redimensionar */
+        }
+
+        .contacto .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contacto .form-row div {
+            flex-grow: 1;
+        }
+
+        .contacto .form-row div:first-child {
+            margin-right: 10px;
+        }
+
+@media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .services {
+                padding: 20px;
+            }
+
+            .service {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+
+            .contacto .form-row {
+                flex-direction: column;
+            }
+
+            .contacto .form-row div {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
 
 .contact-form button {
     background: black;
     color: white;
     padding: 10px 15px;
     font-size: 12px;
-    border: 2.5px solid white; /* Agrega un borde blanco */
+    border: 2.5px solid white; 
     cursor: pointer;
     display: block;
     margin-top: 10px;
     text-transform: uppercase;
-    margin-left: 810px;
+    margin-left: auto;
+    margin-right:45px;
 }
 
 .footer-image {
     position: relative;
-    margin-top: -100px; /* Se sube la imagen para reducir el espacio vacío */
+    margin-top: -100px;
     width: 100%;
     margin-bottom: -10px;
     
@@ -180,23 +204,27 @@
     </div>
     <section class="grid">
         <div class="box">
-            <img src="ejercicio-responsive/carne.jpg" alt="Calidad">
             <h2>Calidad</h2>
+            <img src="ejercicio-responsive/carne.jpg" alt="Calidad">
+            
             <p>Carne de calidad de los valles pirenáicos. Con las mejores garantías de sanidad y sabor.</p>
         </div>
         <div class="box">
-            <img src="ejercicio-responsive/entrega.jpg" alt="Servicio 24h">
             <h2>Servicio 24h</h2>
+            <img src="ejercicio-responsive/entrega.jpg" alt="Servicio 24h">
+            
             <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
         </div>
         <div class="box">
-            <img src="ejercicio-responsive/restaurantes.jpg" alt="Restauración">
             <h2>Restauración</h2>
+            <img src="ejercicio-responsive/restaurantes.jpg" alt="Restauración">
+           
             <p>Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de restauración llámanos.</p>
         </div>
         <div class="box">
-            <img src="ejercicio-responsive/charcuteria.jpg" alt="Charcutería">
             <h2>Charcutería</h2>
+            <img src="ejercicio-responsive/charcuteria.jpg" alt="Charcutería">
+      
             <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
         </div>
     </section>
@@ -207,11 +235,15 @@
     </div>
 </div>
     <section class="contact-form">
-        <form>
+        <form action="http://www.cursos-diseno.es/mostrar.php">
             <div class="form-group">
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Introduzca su email" required>
+                    <tr>
+                        <td><label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Introduzca su email" required ></td>
+
+                    </tr>
+                  
                 </div>
                 <div>
                     <label  for="telefono">Teléfono</label>
@@ -220,8 +252,10 @@
             </div>
             <label id="mensaje"  for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí" required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit" input type="hidden"name="destinatario" value="JeanIsr05@gmail.com">Enviar</button>
+            
         </form>
+        
     </section>
 
     <img src="ejercicio-responsive/inferior.jpg"  class="footer-image">
