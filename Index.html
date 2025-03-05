@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnicería JMR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        header {
+            background-image: url("ejercicio-responsive/superior.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contenedor {
+            max-width: 65%;
+            margin: -50px auto 20px;
+            background: white;
+            position: relative;
+            z-index: 10;
+            margin-top: -280px;
+        }
+        .presentation {
+            text-align: center;
+            padding: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 90%;
+            margin: auto;
+            margin-top: 80px;
+        }
+        .box {
+            background: white;
+            text-align: center;
+        }
+        .box img {
+            max-width: 100%;
+        }
+        .social-icons {
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Ajuste fino para que los iconos estén más juntos */
+    padding: 20px; /* Reducimos el padding */
+        }
+        .social-icons img {
+    width: 80px; /* Ajustar el tamaño de los iconos */
+    height: 80px;
+    margin: 0;
+    margin-top: 60px;
+}
+        .contact-form {
+    background-color: grey;
+    max-width: 62%; 
+    margin:  0 auto; /* Se sube el formulario */
+    position: relative;
+    padding: 25px;
+    z-index: 20; /* Asegura que esté encima de la imagen del footer */
+    margin-top: 120px;
+    height: 55vh;
+}
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+#mensaje{
+    margin-left: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Espacio entre email y teléfono */
+    width: 93%;
+    height: 22vh;
+   
+}
+
+.contact-form .form-group div {
+    flex: 1; /* Ambos elementos ocupan el mismo ancho */
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: white;
+    font-size: 14px;
+    height: 3vh;
+}
+
+.contact-form textarea {
+    height: 20vh; 
+    resize: none;
+    margin-left: 0px;
+    width: 91% ;
+    font-family: sans-serif;
+}
+
+.contact-form button {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    font-size: 12px;
+    border: 2.5px solid white; /* Agrega un borde blanco */
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    text-transform: uppercase;
+    margin-left: 810px;
+}
+
+.footer-image {
+    position: relative;
+    margin-top: -100px; /* Se sube la imagen para reducir el espacio vacío */
+    width: 100%;
+    margin-bottom: -10px;
+    
+}
+    
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 7px;
+            font-size: 14px;
+            position: relative;
+          
+        }
+    </style>
+</head>
+<body>
+   
+ <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Productos</a>
+    <a href="#">Tienda</a>
+</nav>
+<header></header>
+
+<div class="contenedor">
+    <div class="presentation">
+        <h2>PRESENTACIÓN</h2>
+        <p>En Carnicerías ACME ponemos a su disposición las mejores carnes, embutidos y platos preparados, entre otras delicias gourmet. Si tienen un evento y quieren deleitar a sus invitados con unos productos sanos, frescos y sabrosos, contacten con nosotros.</p>
+        <h3>Reparto a domicilio</h3>
+        <p>Realicen su pedido hoy mismo y mañana lo tendrán listo en su domicilio.</p>
+        <h3>Corte tradicional</h3>
+        <p>No tenemos bandejas preparadas. Nuestro corte es artesano y profesional.</p>
+    </div>
+    <section class="grid">
+        <div class="box">
+            <img src="ejercicio-responsive/carne.jpg" alt="Calidad">
+            <h2>Calidad</h2>
+            <p>Carne de calidad de los valles pirenáicos. Con las mejores garantías de sanidad y sabor.</p>
+        </div>
+        <div class="box">
+            <img src="ejercicio-responsive/entrega.jpg" alt="Servicio 24h">
+            <h2>Servicio 24h</h2>
+            <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
+        </div>
+        <div class="box">
+            <img src="ejercicio-responsive/restaurantes.jpg" alt="Restauración">
+            <h2>Restauración</h2>
+            <p>Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de restauración llámanos.</p>
+        </div>
+        <div class="box">
+            <img src="ejercicio-responsive/charcuteria.jpg" alt="Charcutería">
+            <h2>Charcutería</h2>
+            <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
+        </div>
+    </section>
+    <div class="social-icons">
+        <img src="Imagenes 2B/facebook.png">
+        <img src="Imagenes 2B/google-plus.png">
+        <img src="Imagenes 2B/gps.png">
+    </div>
+</div>
+    <section class="contact-form">
+        <form>
+            <div class="form-group">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Introduzca su email" required>
+                </div>
+                <div>
+                    <label  for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Introduzca su teléfono" required>
+                </div>
+            </div>
+            <label id="mensaje"  for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <img src="ejercicio-responsive/inferior.jpg"  class="footer-image">
+
+    <footer>
+        <p>Calle Flores 10, 50013 Zaragoza. Tlf: 555 999 666. Fax: 555 999 666. Email: email@jmr.com</p>
+    </footer>
+</body>
+</html>
