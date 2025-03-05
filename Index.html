@@ -1,267 +1,379 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Carnicerías ACME</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        *{
+            box-sizing: border-box;
+            
+        }
+
+        p{
+            text-align: center;
+            font-size: 1rem;
+            padding: 0 30px;
+            font-family: sans-serif;
+        }
+       
+        .textoFormulario{
             margin: 0;
             padding: 0;
-            background: white;
-            font-family: sans-serif;
-
-        }
-        nav {
-            background: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-        header {
-            background-image: url("ejercicio-responsive/superior.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 250px;
-            width: 100%;
-            margin-bottom: 150px;
-
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contenedor {
-            max-width: 65%;
-            margin: -50px auto 20px;
-            background: white;
-            position: relative;
-            z-index: 10;
-            margin-top: -280px;
-        }
-        .presentation {
-            text-align: center;
-            padding: 40px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            max-width: 90%;
-            margin: auto;
-            margin-top: 80px;
-        }
-        .box {
-            background: white;
-            text-align: center;
-        }
-        .box img {
-            max-width: 100%;
-        }
-        .social-icons {
-            display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px; 
-    padding: 20px; 
-        }
-        .social-icons img {
-    width: 80px; 
-    height: 80px;
-    margin: 0;
-    margin-top: 60px;
-}
-
-.contacto {
-            background: #e0e0e0;
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .contacto form {
-            max-width: none;
-            margin: 20px auto;
-        }
-
-        .contacto label {
-            display: block;
-            color: #000;
-            margin-bottom: 5px;
             text-align: left;
-            margin-left: 8px;
         }
-
-        .contacto input, .contacto textarea {
-            width: calc(100% - 24px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        .contacto textarea {
-            height: 150px;
-            resize: none; /* Deshabilitar la capacidad de redimensionar */
-        }
-
-        .contacto .form-row {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .contacto .form-row div {
-            flex-grow: 1;
-        }
-
-        .contacto .form-row div:first-child {
-            margin-right: 10px;
-        }
-
-@media screen and (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .services {
-                padding: 20px;
-            }
-
-            .service {
-                width: 45%;
-                margin-bottom: 20px;
-            }
-
-            .contacto .form-row {
-                flex-direction: column;
-            }
-
-            .contacto .form-row div {
-                width: 100%;
-                margin-right: 0;
-            }
-        }
-
-
-.contact-form button {
-    background: black;
-    color: white;
-    padding: 10px 15px;
-    font-size: 12px;
-    border: 2.5px solid white; 
-    cursor: pointer;
-    display: block;
-    margin-top: 10px;
-    text-transform: uppercase;
-    margin-left: auto;
-    margin-right:45px;
-}
-
-.footer-image {
-    position: relative;
-    margin-top: -100px;
-    width: 100%;
-    margin-bottom: -10px;
-    
-}
-    
-        footer {
-            background: black;
-            color: white;
+        h1,h2,h3{
             text-align: center;
-            padding: 7px;
-            font-size: 14px;
-            position: relative;
-          
+            font-family: sans-serif;
         }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+        background: url(superior.jpg) ;
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        display: flex;
+        min-height: 70px;
+        margin-bottom: 70px;
+        
+        
+        padding: 10px;
+        }
+        nav{
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            padding: 5px 0;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        
+       
+        .pc{
+            display: none;
+        }
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            
+            
+        }
+        img{
+            width: 80%;
+            object-fit: cover;
+            
+            
+        }
+        .logo{
+           width: 20%;
+           object-fit: cover;
+           margin: 10px 100px;
+           
+        }
+        form{
+            
+            padding: 30px 25px;
+        }
+        .derecha{
+           float: right;
+           background-color: black;
+           color: white;
+        }
+        .formulario-container{
+            width: 100%;
+            background-color: grey;
+        }
+        .anchototal{
+            width: 100%;
+        }
+        .textofinal{
+            
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+           
+            background-color: black;
+            color: white;
+
+        }
+        footer{
+        background-image: url(inferior.jpg);
+        
+        min-height: 70px; 
+        }
+        
+        @media screen and (min-width: 800px){
+           
+            header{
+                background-image: none;
+            }
+            .margen-foto{
+               padding-top:  50px;
+              
+                
+            }
+            nav{
+                display: flex;
+                text-align:center;
+            }
+            nav a{
+                margin: 0 20px;
+                font-family: sans-serif;
+            }
+            
+            .mobile{
+                display: none;
+            }
+            .pc{
+                display: block;
+            }
+            .foto-superior{
+                background-image: url(superior.jpg);
+                
+                
+            }
+            
+           .textos{
+            margin: auto;
+            
+            max-width: 500px;
+            background-color: white;
+           }
+            .textos p{
+            padding: 0 20px;
+           }
+           .contenedor{
+            max-width: 480px;
+            margin: auto;
+            flex-wrap: wrap;
+            flex-direction: row;
+           
+           }
+           
+           
+           .contenedor .texto-foto{
+            width: 48%;
+           }
+          
+           .texto-foto p{
+            margin: 10px 20px 0 20px;
+            padding: 0;
+            
+           }
+           
+           .logos{
+            margin: 60px 0 30px 0;
+           }
+           .logo{
+            width: 15%;
+            margin: 0 30px;
+            
+           }
+           .medio{
+                width: 48%;
+                margin-bottom: 20px ;
+                float: left;
+               
+            }
+           .margenIzquierda{
+                margin-right: 15px;
+           }
+           footer{
+            background-image: none;
+            margin: 10px;
+           }
+           .foto-inferior{
+           
+            background-image: url(inferior.jpg);
+            padding-bottom: 50px;
+            
+            
+           }
+           .blanco{
+            
+            background-color: white;
+            margin: 20px 0 0 0;
+            
+           }
+           .formulario-container{
+            padding: 5px;
+           }
+           .positionRelative{
+            position: relative;
+            top: 80px; 
+            
+           }
+          
+           
+           
+           
+           
+
+        }
+        
+        @media screen and (min-width: 1200px){
+            nav a{
+                margin: 0 40px;
+            }
+            .textos{
+            margin: auto;
+            max-width: 1200px;
+            
+            }
+            .textos p{
+            padding: 0 270px;
+           }
+           .margen-foto{
+            
+            width: 1000px;
+           }
+            .contenedor{
+                display: flex;
+                justify-content: center; /* Centra los elementos */
+                flex-wrap: wrap;
+                max-width: 1600px;
+                margin: auto;
+              
+            
+              
+            }
+            .medio{
+                margin: 0;
+            }
+            .contenedor .texto-foto{
+                width: 15%;
+            }
+            .formulario-container{
+               
+                width: 55%;
+                padding-bottom: 30px;
+            }
+            .margenIzquierda{
+                margin-right: 30px;
+            }
+            .logo{
+                width: 10%;
+               margin: 0 80px 50px 80px
+            }
+            
+        }
+        
     </style>
 </head>
 <body>
-   
- <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="#">Productos</a>
-    <a href="#">Tienda</a>
-</nav>
-<header></header>
-
-<div class="contenedor">
-    <div class="presentation">
-        <h2>PRESENTACIÓN</h2>
-        <p>En Carnicerías ACME ponemos a su disposición las mejores carnes, embutidos y platos preparados, entre otras delicias gourmet. Si tienen un evento y quieren deleitar a sus invitados con unos productos sanos, frescos y sabrosos, contacten con nosotros.</p>
-        <h3>Reparto a domicilio</h3>
-        <p>Realicen su pedido hoy mismo y mañana lo tendrán listo en su domicilio.</p>
-        <h3>Corte tradicional</h3>
-        <p>No tenemos bandejas preparadas. Nuestro corte es artesano y profesional.</p>
-    </div>
-    <section class="grid">
-        <div class="box">
-            <h2>Calidad</h2>
-            <img src="ejercicio-responsive/carne.jpg" alt="Calidad">
-            
-            <p>Carne de calidad de los valles pirenáicos. Con las mejores garantías de sanidad y sabor.</p>
-        </div>
-        <div class="box">
-            <h2>Servicio 24h</h2>
-            <img src="ejercicio-responsive/entrega.jpg" alt="Servicio 24h">
-            
-            <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
-        </div>
-        <div class="box">
-            <h2>Restauración</h2>
-            <img src="ejercicio-responsive/restaurantes.jpg" alt="Restauración">
-           
-            <p>Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de restauración llámanos.</p>
-        </div>
-        <div class="box">
-            <h2>Charcutería</h2>
-            <img src="ejercicio-responsive/charcuteria.jpg" alt="Charcutería">
-      
-            <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
-        </div>
-    </section>
-    <div class="social-icons">
-        <img src="Imagenes 2B/facebook.png">
-        <img src="Imagenes 2B/google-plus.png">
-        <img src="Imagenes 2B/gps.png">
-    </div>
-</div>
-    <section class="contact-form">
-        <form action="http://www.cursos-diseno.es/mostrar.php">
-            <div class="form-group">
-                <div>
-                    <tr>
-                        <td><label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Introduzca su email" required ></td>
-
-                    </tr>
-                  
-                </div>
-                <div>
-                    <label  for="telefono">Teléfono</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Introduzca su teléfono" required>
-                </div>
-            </div>
-            <label id="mensaje"  for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí" required></textarea>
-            <button type="submit" input type="hidden"name="destinatario" value="JeanIsr05@gmail.com">Enviar</button>
-            
-        </form>
+    <div class="foto-superior">
         
-    </section>
+        <header>
+            <nav class="mobile">
+            <a href=""> ☰ Menu</a>
+            </nav>
+            <nav class="pc">
+                <a href="">INICIO</a>
+                <a href="">SERVICIOS</a>
+                <a href="">PRODUCTOS</a>
+                <a href="">TIENDA</a>
+            </nav>
+        
+        </header> 
+   
+         
+                <div class="textos margen-foto">
+                    <h1>PRESENTACIÓN</h1>
+                </div>
+            
+    </div>
+        
+        
+        <div class="textos">
+            <p>En Carnicerías ACME ponemos a su disposición las mejores carnes, embutidos y platos preparados, entre otras delicias gourmet. Si tienen un     evento y quieren deleitar a sus invitados con unos productos sanos, frescos y sabrosos, contacten con nosotros.
+            </p>
+            <h2>Reparto a domicilio</h2>
+            <p>Realicen su pedido hoy mismo y mañana lo tendrán listo en su domicilio.
+            </p>
+            <h2>Corte tradicional</h2>
+            <p>No tenemos bandejas preparadas. Nuestro corte es artesano y profesional.</p>
+        </div>
+         
+        
+        <div class="contenedor ">
+            <section class="texto-foto">
+                <h3>Calidad</h3>
+                <img src="carne.jpg" alt="carne">
+                <p>Carne de calidad de los valles pirenáicos. Con las mejores garantías de sanidad y sabor.</p>
+            </section>
+            <section class="texto-foto">
+                <h3>Servicio 24h</h3>
+                <img src="entrega.jpg" alt="entrega">
+                <p>En nuestro transporte refigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
+            </section>
+            <section class="texto-foto">
+                <h3>Restauración</h3>
+                <img src="restaurantes.jpg" alt="restaurantes">
+                <p>Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de restauración llámanos.</p>
+            </section>
+            <section class="texto-foto">
+                <h3>Charcutería</h3>
+                <img src="charcuteria.jpg" alt="charcuteria">
+                <p>Los mejores ejemplares de jamón ibérico y embutidos tradicionales. Especialistas en charcutería.</p>
+            </section>
+            <div class="margenObligatorio">
 
-    <img src="ejercicio-responsive/inferior.jpg"  class="footer-image">
-
-    <footer>
-        <p>Calle Flores 10, 50013 Zaragoza. Tlf: 555 999 666. Fax: 555 999 666. Email: email@jmr.com</p>
-    </footer>
+            </div>
+            <section class="logos ">
+                <img src="facebook-logo-108.png " class="logo" alt=" facebook logo">
+                <img src="gps.jpg" class="logo" alt="google logo">
+                <img src="" class="logo" alt="location logo">
+            </section>
+            <!--Formulario-->
+        </div>
+       
+            <div class="foto-inferior">
+              <div class="blanco">
+                
+                <div class="contenedor positionRelative">
+                    <div class="formulario-container">
+                        <form action="http://www.cursos-diseno.es/mostrar.php" method="POST">
+                           <div class="background">
+                                    <div class="medio margenIzquierda">
+                                        <p class="textoFormulario">Email</p>
+                                        <input type="email" name="nombre" required class="anchototal ">
+                                </div>
+                                <div class="medio">
+                                    <p class="textoFormulario">Telefono</p>
+                                    <input type="number" name="telefono" required class="anchototal">
+                                </div>
+                           </div>
+                            <p class="textoFormulario">Mensaje</p>
+                            <textarea name="Mensaje" class="anchototal" rows="5" cols="50"></textarea>
+                            <input type="submit" class="derecha" >
+                        </form>
+                    </div>
+              </div>
+                </div>
+               
+                <footer>
+    
+                </footer>
+            </div>
+       
+   
+    
+    <div class="textofinal">
+        Calle Bomba 16. 50010 Saratoga. Tlfno: 666 999 666.
+        <br> 
+        Fax: 999 666 999. Email: email (at) hola.com
+    </div>
 </body>
 </html>
